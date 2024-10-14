@@ -1,0 +1,44 @@
+<nav class="navbar bg-body-tertiary fixed-top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="index.jsp"><img src="product-images/logo.png" alt="Shopmate Logo" height="30" style="margin-right: 10px;">Shopmate</a>
+		<button class="navbar-toggler" type="button"
+			data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+			aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="offcanvas offcanvas-end" tabindex="-1"
+			id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="product-images/logo.png" alt="Shopmate Logo" height="30" style="margin-right: 10px;">Shopmate</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+					aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="index.jsp">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="cart.jsp">Cart<span class="badge bg-danger" style="margin-left:7px">${cart_list.size()}</span></a></li>
+
+					<%
+					if (auth != null) {
+					%>
+					<li class="nav-item"><a class="nav-link" href="orders.jsp">Orders</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="log-out">Logout</a>
+					</li>
+					<%
+					} else {
+					%>
+					<li class="nav-item"><a class="nav-link" href="login.jsp">Login</a>
+					</li>
+					<%
+					}
+					%>
+
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>

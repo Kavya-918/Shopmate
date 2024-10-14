@@ -1,0 +1,129 @@
+/* Navbar Custom Styling */
+
+.navbar {
+	position: fixed; /* Fixed position so navbar stays at the top */
+	top: 0;
+	width: 100%;
+	background: linear-gradient(45deg, #ff007a, #00aaff);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	transition: background-color 0.4s ease;
+	z-index: 1000; /* Ensure navbar is above other elements */
+}
+
+.navbar-brand img {
+    height: 30px;
+    margin-right: 10px;
+}
+.navbar-brand {
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	transition: transform 0.3s ease, color 0.4s ease;
+}
+
+.navbar-brand:hover {
+	transform: scale(1.1);
+	color: #ffaa00;
+}
+
+/* Toggler Button Customization */
+.navbar-toggler {
+	border: none;
+	background-color: #ffaa00;
+	padding: 0.5rem 1rem;
+	border-radius: 50%;
+	transition: background-color 0.3s ease;
+}
+
+.navbar-toggler:hover {
+	background-color: #ff007a;
+}
+
+.navbar-toggler-icon {
+	background-image: url('data:image/svg+xml;base64,...');
+	background-size: contain;
+	width: 25px;
+	height: 25px;
+}
+
+/* Offcanvas Styles */
+.offcanvas {
+	background: rgba(255, 255, 255, 0.95);
+	box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+	transition: transform 0.4s ease;
+}
+
+.offcanvas-header {
+	background: #ffaa00;
+	color: #fff;
+}
+
+.offcanvas-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+}
+
+.offcanvas-body {
+	padding: 2rem;
+}
+
+.offcanvas-body ul li a {
+	color: #333;
+	font-size: 1.2rem;
+	font-weight: bold;
+	position: relative;
+	padding: 0.5rem 1rem;
+	transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s
+		ease;
+}
+
+.offcanvas-body ul li a:hover {
+	color: #ffaa00;
+	background: rgba(0, 0, 0, 0.05);
+	transform: translateX(10px);
+}
+
+.offcanvas-body ul li a.active {
+	color: #ff007a;
+}
+
+.btn-close {
+	background-color: #ff007a;
+	transition: background-color 0.3s ease;
+}
+
+.btn-close:hover {
+	background-color: #ffaa00;
+}
+
+/* Navbar Links Hover Animation */
+.nav-item a::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 3px;
+	background-color: #ffaa00;
+	bottom: -3px;
+	left: 0;
+	transition: width 0.3s ease;
+}
+
+.nav-item a:hover::before {
+	width: 100%;
+}
+
+/* Mobile Adjustments */
+@media ( max-width : 768px) {
+	.navbar {
+		padding: 1rem 1.5rem;
+	}
+	.navbar-brand {
+		font-size: 1.5rem;
+	}
+	.navbar-toggler {
+		padding: 0.4rem 0.9rem;
+	}
+}
